@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/view/static/reset.css">
+  <link rel="stylesheet" href="/view/static/style.css">
+  <title>Editar Filme: </title>
+</head>
+<body>
+  <h1>Altere os dados de seu filme: </h1>
+
+  <form action="/newMovie" method="post">
+    <input name="nameMovie" value="<%= it.title %>" required><br/>
+    <br/>
+    <input name="imageMovie" value="<%= it.url %>"><br/>
+    <br/>
+    <input name="ageMovie" value="<%= it.release %>"><br/>
+    <br/>
+    <input name="idMovie" type="hidden" value="<%= it.id %>">
+    <button name="addMovie">Confirmar</button>
+    <br/>
+    <br/>
+    <%= it.feedback %>
+  </form>
+  <a href="/">Página Principal</a>
+</body>
+</html>

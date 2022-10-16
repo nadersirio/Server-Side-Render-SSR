@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca de Filmes</title>
+  <link rel="stylesheet" href="./static/reset.css">
+  <link rel="stylesheet" href="./static/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1> Biblioteca de filmes </h1><br/>
+  <form action="/search" method="POST">
+    <input name="searchInput" placeholder="Busque nossos filmes!">
+    <button name="searchButton">Search</button>
+  </form>
+  <br/>
+  <%= it.result %>
+  <br/>
+  <br/>
+  <br/>
+  <a href="/newMovie">Adicione novos filmes!</a>
+  <h2>Filmes em cartaz: </h2>
+
+  <% if(it.listagem.length === 0){ %>
+    <p>Sem filmes no momento.</p>
+  <% } else { %>
+    <% it.listagem.forEach(function(filme){ %>
+      <a href="/movie/<%= filme.slug %>"><img alt="Banner do filme." src="<%= filme.url %>"><%= filme.title %></a>
+      <br>
+    <% }) %>
+  <% } %>
+</body>
+</html>

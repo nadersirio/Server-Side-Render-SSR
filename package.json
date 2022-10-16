@@ -1,0 +1,29 @@
+{
+  "name": "backend-training",
+  "version": "1.0.0",
+  "description": "Projeto de treino em front e backend, utilizando node e menu responsívo. Foi criado uma pagina de exposição de filmes e seus banners, juntamente com o iterativo com usuário para adicionar mais filmes..",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadersirio/backend-training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nadersirio/backend-training/issues"
+  },
+  "homepage": "https://github.com/nadersirio/backend-training#readme",
+  "keywords": [],
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "eta": "^1.12.3",
+    "express": "^4.18.1",
+    "fs-jetpack": "^5.0.0",
+    "node-eta": "^0.9.0",
+    "uuid": "^9.0.0"
+  }
+}
