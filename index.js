@@ -2,7 +2,7 @@ const express = require("express");
 const cookieParser = require('cookie-parser');
 const server = express();
 
-const { movieRouter } = require('./movie.js');
+const { movieRouter } = require('./controller/movie.js');
 
 server.use(express.urlencoded({ extended: true }));
 server.use(cookieParser())

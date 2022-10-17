@@ -9,8 +9,8 @@ const {
   getMovieByName,
   searchMovieHash,
   deleteMovie
-} = require("./model/movies.js");
-const { renderExistMovie, render } = require("./view/index.js");
+} = require("../model/movies.js");
+const { renderExistMovie, render } = require("../view/index.js");
 
 movieRouter.get("/", (req, res) => {
   const listagem = getAllMovies();
