@@ -2,14 +2,15 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="/view/static/reset.css">
-  <link rel="stylesheet" href="/view/static/style.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico">
   <title>Insira seu filme</title>
 </head>
 <body>
   <h1>Insira seus filmes: </h1>
 
-  <form action="/newMovie" method="post">
+  <form action="/new-movie" method="post">
     <input name="nameMovie" placeholder="Nome do filme!" required><br/>
     <br/>
     <input name="imageMovie" placeholder="Endereço de url do banner!"><br/>
@@ -20,9 +21,9 @@
     <button name="addMovie" onclick="idCall()">Adicionar</button>
     <br/>
     <br/>
-    <%= it %>
+    <%= it.feedback %>
   </form>
   <a href="/">Página Principal</a>
 </body>
-<script src="./static/script.js"></script>
+<script src="/script.js"></script>
 </html>

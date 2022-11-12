@@ -1,9 +1,18 @@
 body {
-  background: black;
-  color: black;
-  background-color: black;
+  background-image: url(../images/movie-theater-img.webp);
+  background-color: antiquewhite;
 };
 
 h1 {
+  font-size: 30px;
   color: red;
-};
+}
+
+h2 {
+  font-size: 30px;
+  color: rgb(52, 39, 170);
+}
+
+p {
+  font-size: 25px;
+}

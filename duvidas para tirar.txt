@@ -1,0 +1,11 @@
+No Index.html e style.css, eu não consigo declarar o h1, apenas o h2.
+
+Preciso de ajuda para retornar de forma correta o style.css e a pasta imagem como background. Checar o endpoint "server.get(name)".
+
+Retornar arquivo css para outras paginas alem da principal, e saber o porque o css funciona quando a proxima pagina diverge da principal, ex: clicando no "adicionar filme".
+
+Revisar se os urls de methods server estão feitos da forma correta, ex: item/ação/oquevaifazer.
+
+express.router(), testar
+
+em serverRoute.get(movie:slug), quando vou tentar passar o css na url, ele se embaralha junto do slug, retornando então o movie-not-found. Coloque uma ping vermelho no render de view, e cheque o htmlpath.

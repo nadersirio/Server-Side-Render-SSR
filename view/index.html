@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Biblioteca de Filmes</title>
-  <link rel="stylesheet" href="./static/reset.css">
-  <link rel="stylesheet" href="./static/style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
 </head>
 <body>
-  <h1> Biblioteca de filmes </h1><br/>
-  <form action="/search" method="POST">
+  <h1> Biblioteca de Filmes </h1>
+  <br/>
+  <form action="/search-movie" method="POST">
     <input name="searchInput" placeholder="Busque nossos filmes!">
     <button name="searchButton">Search</button>
   </form>
@@ -18,14 +19,20 @@
   <br/>
   <br/>
   <br/>
-  <a href="/newMovie">Adicione novos filmes!</a>
-  <h2>Filmes em cartaz: </h2>
+  <a href="/new-movie">Adicione novos filmes!</a></br>
+  <a href="/register-user">Cadastre-se</a></br>
+  <a href="/login-user">Login</a></br>
+  <p><%= it.userLogged %></p>
+  <% if(it.userLogged){ %>
+    <button type="button"><a href="/log-out-user">Log out</a></button><br/>
+  <% } %>
+  <h2> Filmes em cartaz: </h2>
 
-  <% if(it.listagem.length === 0){ %>
+  <% if(it.listMovies.length === 0){ %>
     <p>Sem filmes no momento.</p>
   <% } else { %>
-    <% it.listagem.forEach(function(filme){ %>
-      <a href="/movie/<%= filme.slug %>"><img alt="Banner do filme." src="<%= filme.url %>"><%= filme.title %></a>
+    <% it.listMovies.forEach(function(movie){ %>
+      <a href="/movie/<%= movie.slug %>"><img alt="Banner do filme." src="<%= movie.url %>"><%= movie.title %></a>
       <br>
     <% }) %>
   <% } %>

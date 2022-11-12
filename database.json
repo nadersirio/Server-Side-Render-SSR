@@ -1,16 +1,14 @@
 {
-  "cartaz": {
-    "5bee5b8a-7111-46e3-8c05-8620202d23fc": {
-      "title": "kung fu panda",
-      "url": "https://images-americanas.b2w.io/produtos/3176971311/imagens/dvd-kung-fu-panda-dreamworks/3176971311_1_large.jpg",
-      "release": "2008",
-      "id": "5bee5b8a-7111-46e3-8c05-8620202d23fc"
-    },
-    "b1e156e3-9326-4154-a6d5-cdec13434c35": {
+  "poster": {
+    "0bde8bca-357b-4846-afb8-ae7d29259321": {
       "title": "Shrek",
       "url": "https://br.web.img2.acsta.net/medias/nmedia/18/91/54/04/20150812.jpg",
-      "release": "2001",
-      "id": "b1e156e3-9326-4154-a6d5-cdec13434c35"
+      "release": "2001"
+    }
+  },
+  "accounts": {
+    "0251ff84-5eb7-4826-9621-d433c11be1ee": {
+      "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hZGVyc2lyaW9AZ21haWwuY29tIiwicGFzc3dvcmQiOiJhYWFhIiwiaWF0IjoxNjY4MjEwODExfQ.8wCTZVdtg87HyX3p7I08S1-_tM4ELpmmpeajtcBb8Bg"
     }
   }
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico">
+  <title>Login de Usuário</title>
+</head>
+<body>
+  <h1>Login de Usuário</h1>
+  <form action="/login-user" method="post">
+    <input name="email" type="email" placeholder="Insira seu email."><br>
+    <input name="password" placeholder="Insira sua senha.">
+    <br>
+    <br>
+    <button type="submit">Logar</button>
+    <br>
+    <br>
+  </form>
+  <%= it.feedback %>
+  <br>
+  <br>
+  <a href="/">Página Principal</a>
+</body>
+</html>

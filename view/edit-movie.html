@@ -2,21 +2,22 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="/view/static/reset.css">
-  <link rel="stylesheet" href="/view/static/style.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico">
   <title>Editar Filme: </title>
 </head>
 <body>
   <h1>Altere os dados de seu filme: </h1>
 
-  <form action="/newMovie" method="post">
+  <form action="/new-movie" method="post">
     <input name="nameMovie" value="<%= it.title %>" required><br/>
     <br/>
     <input name="imageMovie" value="<%= it.url %>"><br/>
     <br/>
     <input name="ageMovie" value="<%= it.release %>"><br/>
     <br/>
-    <input name="idMovie" type="hidden" value="<%= it.id %>">
+    <input name="idMovie" type="hidden" value="<%= it.slug %>">
     <button name="addMovie">Confirmar</button>
     <br/>
     <br/>

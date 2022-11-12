@@ -23,6 +23,7 @@
     "eta": "^1.12.3",
     "express": "^4.18.1",
     "fs-jetpack": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
     "node-eta": "^0.9.0",
     "uuid": "^9.0.0"
   }
