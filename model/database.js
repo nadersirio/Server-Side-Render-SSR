@@ -44,15 +44,10 @@ function searchMovie(param) {
   }
 }
 
-function hashCheckDatabase(newMovie) {
-  const database = getDatabase();
-  return database.poster[newMovie.idMovie];
-}
-
 function titleCheckDataBase(newMovie) {
   const database = getDatabase();
   for(let movie in database.poster) {
-    if(database.poster[movie].title.toLowerCase() === newMovie.nameMovie.toLowerCase()) {
+    if(database.poster[movie].title.toLowerCase() === newMovie.title.toLowerCase()) {
       return database.poster[movie].title;
     }
   }
@@ -70,18 +65,19 @@ function getAllMovies() {
 }
 
 function saveMovie(newMovie) {
-  const hash = uuidv4();
+  const id = uuidv4();
   const database = getDatabase() || {}
-  const currentPoster = database.poster[hash] || {}
 
-  database.poster[hash] = {
-    ...currentPoster,
-    title: newMovie.nameMovie,
-    url: newMovie.imageMovie,
-    release: newMovie.ageMovie,
-  }
+  const movie = {
+    title: newMovie.title,
+    url: newMovie.url,
+    release: newMovie.release,
+  };
 
-  return saveDatabase(database);
+  database.poster[id] = movie; 
+  saveDatabase(database);
+
+  return { ...movie, id };
 }
 
 function editMovie(newMovie){
@@ -110,11 +106,6 @@ function checkAccountExist(userData) {
     });
     return userEmailDecoded === userData.emailUser
   }
-}
-
-function renderRegisterFeedback(feedback) {
-  const { render } = require("../view/movie.js");
-  return render( "/register-user.html", { feedback: feedback })
 }
 
 function newAccount(userData) {
@@ -161,7 +152,6 @@ module.exports = {
   createPoster,
   getDatabase,
   searchMovie,
-  hashCheckDatabase,
   titleCheckDataBase,
   getAllMovies,
   saveMovie,
@@ -169,7 +159,6 @@ module.exports = {
   checkPassword,
   checkAccountExist,
   newAccount,
-  renderRegisterFeedback,
   getCookie,
   validAccount,
 }
