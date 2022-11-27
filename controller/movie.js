@@ -49,7 +49,7 @@ movieRouter.post("/movies", (req, res) => {
   }
 
   const createdMovie = saveMovie(newMovie);
-  res.setHeader('id', createdMovie.slug);
+  res.setHeader('id', createdMovie.id);
   res.status(201).json(createdMovie);
 });
 
