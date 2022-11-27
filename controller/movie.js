@@ -9,7 +9,7 @@ const {
   titleCheckDataBase,
   getAllMovies,
   saveMovie,
-} = require("../model/movie.js");
+} = require("../model/database.js");
 
 movieRouter.get("/movies", (req, res) => {
   const listMovies = getAllMovies();
